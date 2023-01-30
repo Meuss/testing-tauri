@@ -1,7 +1,7 @@
 <script>
-  import "../app.css";
+	import '../tailwind.css';
 </script>
 
 <main class="container">
-  <slot />
+	<slot />
 </main>
