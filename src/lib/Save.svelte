@@ -1,6 +1,7 @@
 <script>
 	import { invoke } from '@tauri-apps/api/tauri';
 	import { BaseDirectory, exists, createDir, writeFile } from '@tauri-apps/api/fs';
+	import Loading from './Loading.svelte';
 
 	let name = '';
 	let greetMsg = '';
@@ -29,8 +30,12 @@
 			<input id="greet-input" placeholder="Enter your name..." bind:value={name} />
 			<button on:click={greet}> Play </button>
 		</div>
+	{:else}
+		<h2>{greetMsg}</h2>
+		<div class="flex justify-center mt-4">
+			<Loading />
+		</div>
 	{/if}
-	<h2>{greetMsg}</h2>
 </div>
 
 <style>
