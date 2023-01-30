@@ -16,6 +16,13 @@
 			"shell": {
 				"all": false,
 				"open": true
+			},
+			"fs": {
+				"all": true,
+				"scope": ["$APP/*", "$DESKTOP/*"]
+			},
+			"path": {
+				"all": true
 			}
 		},
 		"bundle": {
@@ -53,7 +60,7 @@
 		},
 		"windows": [
 			{
-				"fullscreen": true,
+				"fullscreen": false,
 				"height": 1112,
 				"resizable": true,
 				"title": "SwaggerPants",
