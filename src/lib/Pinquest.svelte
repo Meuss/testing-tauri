@@ -8,27 +8,26 @@
 	let mysvg;
 
 	onMount(() => {
-		// function load_animation() {
-		// 	const paths = mysvg.querySelectorAll('path');
-		// 	for (let i = 0; i < paths.length; i++) {
-		// 		single_animations(paths[i], 2);
-		// 	}
-		// }
-		// /**
-		//  * @param {SVGPathElement} el
-		//  * @param {string | number} duration
-		//  */
-		// function single_animations(el, duration) {
-		// 	var length = el.getTotalLength();
-		// 	el.style.transition = el.style.transition = 'none';
-		// 	el.style.strokeDasharray = length + ' ' + length;
-		// 	// @ts-ignore
-		// 	el.style.strokeDashoffset = length;
-		// 	el.getBoundingClientRect();
-		// 	el.style.transition = 'stroke-dashoffset ' + duration + 's cubic-bezier(.7,0,.3,1), fill 0.3s cubic-bezier(.7,0,.3,1)';
-		// 	el.style.strokeDashoffset = '0';
-		// }
-		// load_animation();
+		const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.2 });
+
+		const paths = mysvg.querySelectorAll('path');
+
+		tl.from(paths, {
+			duration: 2,
+			opacity: 0,
+			rotation: 10,
+			x: 30,
+			ease: 'power4.inOut',
+			stagger: 0.3
+		});
+		tl.to(paths, {
+			duration: 1,
+			opacity: 0,
+			rotation: -45,
+			x: 30,
+			ease: 'power4.inOut',
+			stagger: 0.1
+		});
 	});
 </script>
 
@@ -81,12 +80,9 @@
 	path {
 		stroke: #f6f6f6;
 		stroke-width: 1px;
+		/* opacity: 0; */
 		&.special-q {
 			stroke: none;
-		}
-		&.transparent {
-			/* fill: none; */
-			/* fill: #f6f6f6; */
 		}
 	}
 </style>
