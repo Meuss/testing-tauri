@@ -1,8 +1,11 @@
-# Svelte-Kit + Vite
+# Windows bundle setup
 
-This template should help get you started developing with Tauri and Svelte-Kit in Vite.
+1. Microsoft Visual Studio C++ Build Tools installed
+2. WebView2 installed (Windows 11 pre-installed)
+3. [Rust intaller](https://www.rust-lang.org/tools/install) or `winget install --id Rustlang.Rustup`
 
-## Recommended IDE Setup
+[Doc](https://tauri.app/v1/guides/getting-started/prerequisites)
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+# Building the bundle
 
+`npm run tauri build`
