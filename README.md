@@ -1,8 +1,14 @@
-# Svelte-Kit + Vite
+# Android bundle
 
-This template should help get you started developing with Tauri and Svelte-Kit in Vite.
+[tutorial](https://hackmd.io/@lucasfernog/BkHI4e18j)
 
-## Recommended IDE Setup
+1. Install JDK
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+`brew install openjdk`
 
+`sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"`
+
+`echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc`
+
+2. Installing Android SDK and NDK
